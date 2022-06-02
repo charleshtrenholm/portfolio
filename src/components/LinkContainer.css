@@ -1,0 +1,23 @@
+.link-container {
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    display: flex;
+}
+
+.link-container > a {
+    flex-grow: 3;
+    color: blue;
+    text-decoration: none;
+    font-family: 'cheee-peeenutt', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;
+    padding: 5px 0px 5px 0px;
+}
+
+.link-container > a:hover {
+    color: rgb(253, 245, 201);
+    background-color: blue;
+    border-radius: 50px;
+    transition: 0.4s;
+}

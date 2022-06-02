@@ -18,7 +18,18 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  background-image: url('../images/site_background_test04.png');
+  background-attachment: fixed;
+  /* animation: site-background 6s infinite;
+  transform: translate(360deg); hack to use GPU for animation */
 }
+
+@keyframes site-background {
+  0% {background-color: #ffffaa}
+  50% {background-color: #ffffee}
+  100% {background-color: #ffffaa}
+}
+
 article,
 aside,
 details,
