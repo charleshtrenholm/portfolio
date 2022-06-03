@@ -23,12 +23,13 @@ const JobsContainer = (props) => {
                         Work Experience
                     </h1>
                     <div className="jobs-wrapper">
-                        {Object.entries(data).map(([jobTitle, {img, description}]) => 
+                        {Object.entries(data).map(([jobTitle, {img, description, link}]) => 
                             <JobCard
                                 title={jobTitle}
                                 description={description}
                                 img={img}
                                 onJobChange={setCurrentJob}
+                                link={link}
                             />
                         )}
                     </div>

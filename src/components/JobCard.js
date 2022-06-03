@@ -1,10 +1,10 @@
 import React from "react";
-import { StaticImage } from 'gatsby-plugin-image';
 import './JobsContainer.css';
 
 const JobCard = ({
   title,
   img,
+  link,
   description,
   onJobChange
 }) => {
@@ -12,7 +12,7 @@ const JobCard = ({
 
   function handleMouseUp() {
     console.log('mousing up');
-    onJobChange({img, title, description});
+    onJobChange({img, title, description, link});
   }
 
   return (

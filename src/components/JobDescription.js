@@ -11,6 +11,13 @@ const JobDescription = ({
     onDismiss();
   }
 
+  function formatLinks(text) {
+    const [preLink, postLink] = text.split('@here');
+    return (
+      <p>{preLink}<a href={job.link}>here</a>{postLink}</p>
+    )
+  }
+
   const images = require.context('../images', true);
 
   return (
@@ -22,7 +29,8 @@ const JobDescription = ({
         <h2>{job.title}</h2>
         <div className="job-description-text-and-image">
           <img src={images(`./${job.img}`).default} />
-          <p>{job.description}</p>
+          {/* <p>{job.description}</p> */}
+          {formatLinks(job.description)}
         </div>
       </div>
     </div>
