@@ -16,13 +16,13 @@ const JobsContainer = (props) => {
         <div className="jobs-container-container-container">
             <div className="jobs-container-container">
                 <div className="jobs-container">
+                    {currentJob !== null &&
+                        <JobDescription job={currentJob} onDismiss={() => setCurrentJob(null)} />
+                    }
                     <h1 className="jobs-header">
                         Work Experience
                     </h1>
                     <div className="jobs-wrapper">
-                        {currentJob !== null &&
-                            <JobDescription job={currentJob} onDismiss={() => setCurrentJob(null)} />
-                        }
                         {Object.entries(data).map(([jobTitle, {img, description}]) => 
                             <JobCard
                                 title={jobTitle}
