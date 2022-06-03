@@ -11,6 +11,8 @@ const JobDescription = ({
     onDismiss();
   }
 
+  const images = require.context('../images', true);
+
   return (
     <div className="job-description-wrapper">
       <div className="job-description-dismiss">
@@ -18,7 +20,10 @@ const JobDescription = ({
       </div>
       <div className="job-description-content">
         <h2>{job.title}</h2>
-        <p>{job.description}</p>
+        <div className="job-description-text-and-image">
+          <img src={images(`./${job.img}`).default} />
+          <p>{job.description}</p>
+        </div>
       </div>
     </div>
   )

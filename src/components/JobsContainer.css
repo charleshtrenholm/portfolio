@@ -55,7 +55,7 @@
     position: relative;
     box-shadow: 3px 3px black;
     top: -3px;
-    left: -3px;
+    /* left: -3px; */
     filter: none;
 }
 
@@ -113,4 +113,21 @@
     font-family: 'cheee-peeenutt', sans-serif;
     font-size: 2rem;
     color: rgb(0,15,134);
+}
+
+.job-description-text-and-image > p {
+    text-align: left;
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.job-description-text-and-image {
+    display: flex;
+}
+.job-description-text-and-image > img {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    object-fit: scale-down;
 }
