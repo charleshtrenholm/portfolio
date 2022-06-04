@@ -12,6 +12,7 @@ const JobDescription = ({
   }
 
   function formatLinks(text) {
+    if (!job.link) return <p>{text}</p>
     const [preLink, postLink] = text.split('@here');
     return (
       <p>{preLink}<a href={job.link}>here</a>{postLink}</p>
@@ -29,7 +30,6 @@ const JobDescription = ({
         <h2>{job.title}</h2>
         <div className="job-description-text-and-image">
           <img src={images(`./${job.img}`).default} />
-          {/* <p>{job.description}</p> */}
           {formatLinks(job.description)}
         </div>
       </div>
